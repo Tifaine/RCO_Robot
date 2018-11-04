@@ -14,6 +14,7 @@ LIBSFLAGS=
 IDIRS=-I. \
 -I./lib/roboclaw \
 -I./struct \
+-I./deplacement \
 
 FLAGS+=$(CROSS_LIBS) $(IDIRS) $(LIBSFLAGS) -DVERSION="\"${VERSION}\"" -DTIMESTAMP="\"${TIMESTAMP}\"" -Wall
 

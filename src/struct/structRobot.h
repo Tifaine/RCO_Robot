@@ -15,6 +15,8 @@ typedef struct Robot
   float yRobot;
   float orientationRobot;
 
+  float distanceParcourue;
+
   float coeffLongG;
   float coeffLongD;
   float coeffAngleG;
