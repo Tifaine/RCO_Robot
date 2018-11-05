@@ -9,10 +9,11 @@ CROSS_LIBS=
 VERSION=0.1.2
 TIMESTAMP:=$(shell date "+%F %T")
 
-LIBSFLAGS=
+LIBSFLAGS= -lmxml -lpthread
 
 IDIRS=-I. \
 -I./lib/roboclaw \
+-I./lib/parserXML \
 -I./struct \
 -I./deplacement \
 

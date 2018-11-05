@@ -11,8 +11,8 @@ void launch()
   init();
   while(!stop)
   {
-    calculPosition(rc,&robot1);
-    printf("%f %f %f %d %d\n",robot1.xRobot,robot1.yRobot,robot1.orientationRobot,robot1.codeurGauche, robot1.codeurDroit);
+    //calculPosition(rc,&robot1);
+    //printf("%f %f %f %d %d\n",robot1.xRobot,robot1.yRobot,robot1.orientationRobot,robot1.codeurGauche, robot1.codeurDroit);
     usleep(1000*500);
   }
   printf("Good bye \n");
@@ -38,6 +38,7 @@ On met tout au même endroit, ça nous évitera de chercher partout si on en a p
 
 init 1 : Initialisation du signal CTRL+C
 init 2 : Roboclaw
+init 3 : Odom
 */
 void init()
 {
@@ -61,7 +62,7 @@ void init()
   sigaction(SIGINT, &action, &oldAction);
 
   //initialize at supplied terminal at specified baudrate
-  rc=roboclaw_init("/dev/ttyACM0", 115200);
+  /*rc=roboclaw_init("/dev/ttyACM0", 115200);
   if( rc == NULL )
   {
     perror("unable to initialize roboclaw");
@@ -70,5 +71,6 @@ void init()
   robot1.xRobot = 0.;
   robot1.yRobot = 0.;
   robot1.orientationRobot = 0.;
-  initOdometrie(rc,&robot1);
+  initOdometrie(rc,&robot1);*/
+  ouvrirXML();
 }

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<typeXml key="mer. avr. 18 18:20:18 2018 GMT">scenario</typeXml>
+<Sequence>
+    <version>3.1</version>
+    <Action type="actionDepart" numero="0">
+        <bloc x="-17" y="328" />
+        <fils liste="2;17;22;" />
+        <parametres lets="go" />
+    </Action>
+    <Action type="actionFin" numero="1">
+        <bloc x="2860" y="240" />
+        <pere liste="6;" />
+        <parametres Itis="The end" />
+    </Action>
+    <Action type="actionValeur" numero="2">
+        <bloc x="220" y="240" />
+        <fils liste="3;" />
+        <pere liste="0;" />
+        <parametres id="4" value="200" />
+    </Action>
+    <Action type="actionRetourBlocage" numero="3" timeout="5000">
+        <bloc x="440" y="240" />
+        <fils liste="5;4;" />
+        <timeout liste="" />
+        <pere liste="2;" />
+        <parametres sensibilite="100" />
+    </Action>
+    <Action type="actionValeur" numero="4">
+        <bloc x="660" y="120" />
+        <fils liste="" />
+        <pere liste="3;" />
+        <parametres id="1" value="-1412" />
+    </Action>
+    <Action type="actionValeur" numero="5">
+        <bloc x="660" y="240" />
+        <fils liste="7;" />
+        <pere liste="3;" />
+        <parametres id="3" value="180" />
+    </Action>
+    <Action type="actionRotation" numero="6" timeout="15000">
+        <bloc x="2640" y="240" />
+        <fils liste="1;" />
+        <timeout liste="" />
+        <pere liste="13;" />
+        <parametres angle="-45" vitesse="180" precision="3" />
+    </Action>
+    <Action type="actionDeplacement" numero="7" timeout="5000">
+        <bloc x="880" y="240" />
+        <fils liste="8;" />
+        <timeout liste="" />
+        <pere liste="5;" />
+        <parametres id="1" value="-100" vitesse="200" />
+    </Action>
+    <Action type="actionDeplacement" numero="8" timeout="5000">
+        <bloc x="1100" y="240" />
+        <fils liste="16;" />
+        <timeout liste="" />
+        <pere liste="7;" />
+        <parametres id="2" value="-90" vitesse="200" />
+    </Action>
+    <Action type="actionValeur" numero="9">
+        <bloc x="1320" y="120" />
+        <fils liste="10;" />
+        <pere liste="16;" />
+        <parametres id="4" value="200" />
+    </Action>
+    <Action type="actionRetourBlocage" numero="10" timeout="5000">
+        <bloc x="1540" y="240" />
+        <fils liste="11;12;" />
+        <timeout liste="" />
+        <pere liste="9;" />
+        <parametres sensibilite="100" />
+    </Action>
+    <Action type="actionValeur" numero="11">
+        <bloc x="1760" y="120" />
+        <fils liste="" />
+        <pere liste="10;" />
+        <parametres id="2" value="1912" />
+    </Action>
+    <Action type="actionValeur" numero="12">
+        <bloc x="1760" y="240" />
+        <fils liste="15;" />
+        <pere liste="10;" />
+        <parametres id="3" value="90" />
+    </Action>
+    <Action type="actionPosition" numero="13" timeout="5000">
+        <bloc x="2420" y="240" />
+        <fils liste="6;" />
+        <timeout liste="" />
+        <pere liste="14;" />
+        <parametres x="-1275" y="1550" vitesse="200" acc="1000" dec="1000" sens="1" precision="20" />
+    </Action>
+    <Action type="actionDeplacement" numero="14" timeout="5000">
+        <bloc x="2200" y="240" />
+        <fils liste="13;" />
+        <timeout liste="" />
+        <pere liste="15;" />
+        <parametres id="1" value="-150" vitesse="200" />
+    </Action>
+    <Action type="actionPause" numero="15">
+        <bloc x="1980" y="240" />
+        <fils liste="14;" />
+        <pere liste="12;" />
+        <parametres temps="100" />
+    </Action>
+    <Action type="actionPause" numero="16">
+        <bloc x="1100" y="120" />
+        <fils liste="9;" />
+        <pere liste="8;" />
+        <parametres temps="500" />
+    </Action>
+    <Action type="actionDyna" numero="17">
+        <bloc x="220" y="360" />
+        <fils liste="18;20;" />
+        <pere liste="0;" />
+        <parametres nom="Carrousel" id="1" angle="31" vitesse="30" />
+    </Action>
+    <Action type="actionDyna" numero="18">
+        <bloc x="440" y="360" />
+        <fils liste="19;" />
+        <pere liste="17;" />
+        <parametres nom="Ascenseur" id="12" angle="10" vitesse="100" />
+    </Action>
+    <Action type="actionDyna" numero="19">
+        <bloc x="660" y="360" />
+        <fils liste="" />
+        <pere liste="18;" />
+        <parametres nom="serre cube" id="2" angle="60" vitesse="100" />
+    </Action>
+    <Action type="actionServo" numero="20">
+        <bloc x="440" y="600" />
+        <fils liste="21;" />
+        <pere liste="17;" />
+        <parametres nom="Servo_ARG_cube" id="16" angle="160" />
+    </Action>
+    <Action type="actionServo" numero="21">
+        <bloc x="660" y="600" />
+        <fils liste="" />
+        <pere liste="20;" />
+        <parametres nom="Servo_ARD_cube" id="15" angle="420" />
+    </Action>
+    <Action type="actionServo" numero="22">
+        <bloc x="216" y="603" />
+        <fils liste="" />
+        <pere liste="0;" />
+        <parametres nom="Clapet" id="14" angle="150" />
+    </Action>
+</Sequence>
