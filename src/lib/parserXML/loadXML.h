@@ -7,6 +7,6 @@
 #include <string.h>
 #include "../../struct/structAction.h"
 
-int ouvrirXML();
+Action* ouvrirXML(int* nbAction);
 
 #endif //LOADXML_H

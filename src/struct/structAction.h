@@ -37,8 +37,10 @@ typedef struct Action
 {
   typeAction type;
   int numero;
+  int timeout;
   char* listPere;
   char* listFils;
+  char* listTimeOut;
 
   char** params;
 

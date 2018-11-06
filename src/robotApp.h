@@ -7,6 +7,7 @@
 #include "lib/parserXML/loadXML.h"
 #include "deplacement/odometrie.h"
 #include "struct/structRobot.h"
+#include "struct/structAction.h"
 #include <signal.h>
 
 void launch();

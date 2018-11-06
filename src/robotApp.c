@@ -5,6 +5,8 @@
 unsigned short stop = 0;
 roboclaw *rc;
 Robot robot1;
+Action* tabActionTotal;
+int nbAction;
 
 void launch()
 {
@@ -72,5 +74,7 @@ void init()
   robot1.yRobot = 0.;
   robot1.orientationRobot = 0.;
   initOdometrie(rc,&robot1);*/
-  ouvrirXML();
+  tabActionTotal = ouvrirXML(&nbAction);
+
+  printf("Nb Action : %d %d\n",nbAction,tabActionTotal[28].type);
 }
