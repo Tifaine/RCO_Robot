@@ -13,7 +13,7 @@ int32_t deltaComptD;
 
 float dAngle, dDeplacement, dX, dY;
 
-void calculPosition(roboclaw* rc, Robot* robot)
+void calculPosition(struct roboclaw* rc, Robot* robot)
 {
   codeurGauchePrecedent = robot->codeurGauche;
   codeurDroitPrecedent = robot->codeurDroit;
@@ -45,7 +45,7 @@ void calculPosition(roboclaw* rc, Robot* robot)
   robot->yRobot += dY;
 }
 
-void initOdometrie(roboclaw* rc, Robot* robot)
+void initOdometrie(struct roboclaw* rc, Robot* robot)
 {
   robot->coeffLongG=  -0.0489441484;
   robot->coeffLongD=  0.0489296636;

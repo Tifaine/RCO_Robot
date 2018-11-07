@@ -40,6 +40,9 @@ Action* ouvrirXML(int* nbAction)
         if(mxmlElementGetAttr(node, "timeout") != NULL)
         {
           tabActionTotal[indiceActionEnCours].timeout = atoi(mxmlElementGetAttr(node, "timeout"));
+        }else
+        {
+          tabActionTotal[indiceActionEnCours].timeout = 0;
         }
 
         const char* type = mxmlElementGetAttr(node, "type");

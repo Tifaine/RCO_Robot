@@ -1,9 +1,10 @@
 #include "robotApp.h"
+#include "GestionAction/management.h"
 #include <unistd.h>
 
 //Drapeau d'arrêt du programme. Sa valeur d'origine est 0.
 unsigned short stop = 0;
-roboclaw *rc;
+struct roboclaw *rc;
 Robot robot1;
 Action* tabActionTotal;
 int nbAction;
@@ -11,6 +12,7 @@ int nbAction;
 void launch()
 {
   init();
+  updateActionEnCours(tabActionTotal);
   while(!stop)
   {
     //calculPosition(rc,&robot1);
@@ -49,7 +51,7 @@ void init()
 
   //Structure pour l'enregistrement d'une action déclenchée lors de la reception d'un signal.
   struct sigaction action, oldAction;
-
+  struct timeval start;
   action.sa_handler = signalHandler;	//La fonction qui sera appellé est signalHandler
 
   //On vide la liste des signaux bloqués pendant le traitement
@@ -75,6 +77,10 @@ void init()
   robot1.orientationRobot = 0.;
   initOdometrie(rc,&robot1);*/
   tabActionTotal = ouvrirXML(&nbAction);
-
-  printf("Nb Action : %d %d\n",nbAction,tabActionTotal[28].type);
+  if(nbAction>0)
+  {
+    gettimeofday(&start, NULL);
+    tabActionTotal[0].heureCreation = start.tv_sec * 1000000 + start.tv_usec;
+  }
+  printf("Nb Action : %d %f\n",nbAction,tabActionTotal[0].heureCreation);
 }

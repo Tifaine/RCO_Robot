@@ -2,7 +2,7 @@
 #define STRUCTACTION_H
 
 #include <stdint.h> //uint8_t, int16_t
-enum typeAction
+typedef enum typeAction
 {
   TYPE_SERVO              =     0,
   TYPE_DYNA               =     1,
@@ -30,8 +30,7 @@ enum typeAction
   TYPE_SET_VARIABLE       =     24,
   TYPE_GET_VARIABLE       =     25
 
-
-};
+}typeAction;
 
 typedef struct Action
 {
@@ -43,6 +42,8 @@ typedef struct Action
   char* listTimeOut;
 
   char** params;
+
+  double heureCreation;
 
 }Action;
 #endif //STRUCTACTION_H

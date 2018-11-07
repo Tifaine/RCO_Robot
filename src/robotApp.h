@@ -3,6 +3,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
+#include <sys/time.h>
 #include "lib/roboclaw/roboclaw.h"
 #include "lib/parserXML/loadXML.h"
 #include "deplacement/odometrie.h"

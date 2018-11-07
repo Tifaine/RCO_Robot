@@ -2,20 +2,21 @@
 ROOT_DIR=../bin
 EXEC=eave
 
-CXX=g++
+CXX=gcc
 CROSS_COMPILE=
 CROSS_LIBS=
 
 VERSION=0.1.2
 TIMESTAMP:=$(shell date "+%F %T")
 
-LIBSFLAGS= -lmxml -lpthread
+LIBSFLAGS= -lmxml -lpthread -lm
 
 IDIRS=-I. \
 -I./lib/roboclaw \
 -I./lib/parserXML \
 -I./struct \
 -I./deplacement \
+-I./GestionAction \
 
 FLAGS+=$(CROSS_LIBS) $(IDIRS) $(LIBSFLAGS) -DVERSION="\"${VERSION}\"" -DTIMESTAMP="\"${TIMESTAMP}\"" -Wall
 
